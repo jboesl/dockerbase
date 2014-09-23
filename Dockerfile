@@ -17,4 +17,4 @@ RUN \
 
 
 ADD base /a/base
-ENTRYPOINT /a/base/start.sh
+ENTRYPOINT ["/a/base/start.sh"]
