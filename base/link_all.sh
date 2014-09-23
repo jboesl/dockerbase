@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # links all files in the source directory with the corresponding files in the root directory.
-SOURCE_DIR=/${AINIT}/fs
+SOURCE_DIR=${AINIT}/fs
 
 linkAll() {
   while [ "$1" ]; do
@@ -11,10 +11,10 @@ linkAll() {
         mkdir -p "$TARGET"
       fi
     else
-      $(ln -s -f $1 $TARGET)
+      $(ln -s -f $1 ${TARGET})
     fi
     shift
   done
 }
 
-linkAll $(find $SOURCE_DIR)
+linkAll $(find ${SOURCE_DIR})

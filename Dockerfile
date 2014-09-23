@@ -16,5 +16,5 @@ RUN \
   ln -s -f /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 
 
-ADD a/base /a/base
+ADD base /a/base
 ENTRYPOINT /a/base/start.sh
