@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # links all files in the source directory with the corresponding files in the root directory.
-SOURCE_DIR=${AINIT}/fs
+SOURCE_DIR=$1
 
 linkAll() {
   while [ "$1" ]; do
