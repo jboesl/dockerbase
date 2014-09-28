@@ -11,4 +11,4 @@ if [ -f "${AINIT}/start_additional.sh" ]; then
   ${AINIT}/start_additional.sh
 fi
 
-exec $1
+exec $@
