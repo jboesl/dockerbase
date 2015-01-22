@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # links all files in the source directory with the corresponding files in the root directory.
-SOURCE_DIR=$1
+
 
 linkAll() {
   while [ "$1" ]; do
@@ -17,4 +17,13 @@ linkAll() {
   done
 }
 
-linkAll $(find ${SOURCE_DIR})
+
+SOURCE_DIR=$1
+if [ -z "${SOURCE_DIR}" ]; then
+  SOURCE_DIR="${AINIT}/fs"
+fi
+
+if [ -d ${LINK_ALL_DIR} ]; then
+  linkAll $(find ${SOURCE_DIR})
+  echo "linking was finished successfully."
+fi
