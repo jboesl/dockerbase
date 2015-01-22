@@ -23,7 +23,7 @@ if [ -z "${SOURCE_DIR}" ]; then
   SOURCE_DIR="${AINIT}/fs"
 fi
 
-if [ -d ${LINK_ALL_DIR} ]; then
+if [ -d ${SOURCE_DIR} ]; then
   linkAll $(find ${SOURCE_DIR})
   echo "linking was finished successfully."
 fi
