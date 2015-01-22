@@ -9,10 +9,11 @@ if [ -d ${LINK_ALL_DIR} ]; then
   ${CUR_DIR}/link_all.sh ${LINK_ALL_DIR}
 fi
 
-# call additional
-if [ -f "${AINIT}/start_additional.sh" ]; then
-  echo "calling 'start_additional'."
-  ${AINIT}/start_additional.sh
-fi
+# run init scripts
+for file in "${AINIT}"/*.sh
+do
+  echo "calling '${file}'."
+  ${file}
+done
 
 exec $@
